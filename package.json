@@ -10,12 +10,15 @@
   "author": "Lochlan Bunn <bunn@lochlan.io>",
   "license": "MIT",
   "scripts": {
-    "test": "node ./index.js tests.ws",
-    "hworld": "node ./index.js hworld.ws"
+    "test": "ts-node ./index.ts tests.ws",
+    "hworld": "ts-node ./index.ts hworld.ws"
   },
   "dependencies": {
+    "@types/node": "^14.0.5",
     "get-stdin": "^5.0.1",
-    "meow": "^4.0.0"
+    "meow": "^4.0.0",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3"
   },
   "tags": [
     "cli",
