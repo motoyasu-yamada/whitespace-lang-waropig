@@ -10,7 +10,8 @@
   "author": "Lochlan Bunn <bunn@lochlan.io>",
   "license": "MIT",
   "scripts": {
-    "test": "./index.js tests.ws"
+    "test": "node ./index.js tests.ws",
+    "hworld": "node ./index.js hworld.ws"
   },
   "dependencies": {
     "get-stdin": "^5.0.1",
