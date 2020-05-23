@@ -9,7 +9,6 @@ const srcLang: LanguageDefinition = require(`./langs/${srcExt}`).default;
 if (!srcLang) {
   throw new Error(`指定された入力言語(${srcExt})は認識できません`);
 }
-console.log(srcLang);
 console.log(`入力言語: ${srcLang.name}(${srcExt})`);
 
 const srcTokenToId = Object.entries(srcLang.tokens).reduce((p, [id, token]) => {

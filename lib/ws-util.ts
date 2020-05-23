@@ -1,6 +1,6 @@
-const TOKEN = require("./tokens").TOKEN;
+import { LanguageDefinition } from "../lang";
 
-module.exports = (function () {
+module.exports = function (lang: LanguageDefinition) {
   return {
     labelTransformer: function (labelGenerator) {
       var length = 0;
@@ -30,7 +30,7 @@ module.exports = (function () {
         },
         getNext: function () {
           var next = this.arr[this.pos++];
-          if (next == TOKEN.N) {
+          if (next == lang.tokens.N) {
             this.line++;
             this.col = 1;
           } else {
@@ -44,4 +44,4 @@ module.exports = (function () {
       };
     },
   };
-})();
+};
